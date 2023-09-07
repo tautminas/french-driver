@@ -3,6 +3,6 @@ dist/
 venv/
 __pycache__
 .idea
-main.spec
+french-driver.spec
 data/high_score.txt
 data/mistakes.txt

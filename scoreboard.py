@@ -1,19 +1,12 @@
 from turtle import Turtle
 import os
-import sys
-
 
 ALIGNMENT = "center"
 FONT = ("Courier", 24, "normal")
 HIGH_SCORE_FONT = ("Courier", 12, "normal")
-# Check if the script is running in a PyInstaller bundle
-if getattr(sys, 'frozen', False):
-    ASSETS_DIR = os.path.join(sys._MEIPASS, "assets")
-else:
-    ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
+ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
 HEART_PATH = os.path.join(ASSETS_DIR, "heart.gif")
-# Check if the script is running in a PyInstaller bundle
-DATA_DIR = os.path.join(sys._MEIPASS, "data") if getattr(sys, 'frozen', False) else "data"
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 HIGH_SCORE_PATH = os.path.join(DATA_DIR, "high_score.txt")
 
 

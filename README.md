@@ -1,9 +1,3 @@
----
-title: Documentation of French Driver
-author: Tautminas Cibulskis
-date: September 8, 2023
----
-
 # French Driver Game
 
 ## About the game

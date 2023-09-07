@@ -3,14 +3,13 @@ from random import shuffle, choice, randint
 import datetime
 import pandas
 import os
-import sys
 
 SPEED = 5
 ACCELERATION = 10
 MAX_SPEED = 55
-# Check if the script is running in a PyInstaller bundle
-DATA_DIR = os.path.join(sys._MEIPASS, "data") if getattr(sys, 'frozen', False) else "data"
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 FRENCH_WORDS_PATH = os.path.join(DATA_DIR, "french_words.csv")
+MISTAKES_PATH = os.path.join(DATA_DIR, "mistakes.txt")
 
 
 class QuestionManager:
@@ -141,7 +140,7 @@ class QuestionManager:
     def write_mistakes_to_file(self):
         current_datetime = datetime.datetime.now()
         formatted_datetime = current_datetime.strftime("%Y-%m-%d (%H:%M)")
-        with open("./data/mistakes.txt", "a", encoding='utf-8') as file:
+        with open(MISTAKES_PATH, "a", encoding='utf-8') as file:
             file.write(f"{formatted_datetime}: {'; '.join(self.mistakes)}\n")
 
     def refresh_question_manager(self):
