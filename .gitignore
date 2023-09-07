@@ -1,0 +1,8 @@
+build/
+dist/
+venv/
+__pycache__
+.idea
+main.spec
+data/high_score.txt
+data/mistakes.txt
