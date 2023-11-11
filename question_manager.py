@@ -3,11 +3,15 @@ from random import shuffle, choice, randint
 import datetime
 import pandas
 import os
+import sys
 
 SPEED = 5
 ACCELERATION = 10
 MAX_SPEED = 55
-DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+BASE_PATH = os.path.abspath(os.path.dirname(sys.argv[0]))
+if os.path.basename(BASE_PATH) == 'dist':
+    BASE_PATH = os.path.abspath(os.path.join(BASE_PATH, os.pardir))
+DATA_DIR = os.path.join(BASE_PATH, "data")
 FRENCH_WORDS_PATH = os.path.join(DATA_DIR, "french_words.csv")
 MISTAKES_PATH = os.path.join(DATA_DIR, "mistakes.txt")
 

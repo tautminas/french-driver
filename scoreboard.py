@@ -1,12 +1,16 @@
 from turtle import Turtle
 import os
+import sys
 
 ALIGNMENT = "center"
 FONT = ("Courier", 24, "normal")
 HIGH_SCORE_FONT = ("Courier", 12, "normal")
-ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
+BASE_PATH = os.path.abspath(os.path.dirname(sys.argv[0]))
+if os.path.basename(BASE_PATH) == 'dist':
+    BASE_PATH = os.path.abspath(os.path.join(BASE_PATH, os.pardir))
+ASSETS_DIR = os.path.join(BASE_PATH, "assets")
 HEART_PATH = os.path.join(ASSETS_DIR, "heart.gif")
-DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+DATA_DIR = os.path.join(BASE_PATH, "data")
 HIGH_SCORE_PATH = os.path.join(DATA_DIR, "high_score.txt")
 
 

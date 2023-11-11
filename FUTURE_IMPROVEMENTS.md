@@ -11,6 +11,3 @@ Refactor the code 🙂:
 - Handle Terminator exception without running the whole game in the try block.
 - Avoid the repetition of prepare_turtle function inside multiple classes.
 - Make main.py clearer by adding the game code into functions of by creating a new class.
-
-Bugs:
-- Executable file does not save high score between sessions and does not keep track of the made mistakes in text file. 

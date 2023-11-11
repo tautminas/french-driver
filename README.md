@@ -9,7 +9,7 @@ French Driver is an educational game for learning top 1000 French words. It is m
 
 ## Running the program
 
-Create virtual environment
+Create virtual environment:
 ```bash
 python -m venv french-driver
 ```
@@ -34,12 +34,15 @@ Run the game:
 python main.py
 ```
 
-You can make an executable file for easier future replay (it will be generated in the dist/ directory):
+You can make an executable file for easier future replay:
 ```bash
 pyinstaller --onefile --noconsole --add-data "assets;assets" --add-data "data;data" --icon="./assets/france.ico" --name="french-driver" main.py
 ```
 
+The executable file will be generated in the dist/ directory. In case you would like to have the executable file in the different location please create a shortcut. Plain location change of the executable will not work. You can create the shortcut on Windows operating system by right-clicking on the executable file and selecting "Send to" -> "Desktop (create shortcut)." This will create a shortcut on your desktop.
+
 After you are done playing leave the virtual environment:
+
 ```bash
 deactivate
 ```

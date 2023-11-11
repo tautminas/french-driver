@@ -132,4 +132,4 @@ try:
                     first_play = False
             screen.tracer(1)
 except Terminator:
-    print("Turtle graphics window was closed by the escape button. Thank you for playing :)!")
+    print("Turtle graphics window was closed by the escape button.")
