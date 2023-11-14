@@ -133,3 +133,9 @@ try:
             screen.tracer(1)
 except Terminator:
     print("Turtle graphics window was closed by the escape button.")
+except Exception as e:
+    if "application has been destroyed" in str(e):
+        print("Window has been closed.")
+    else:
+        # Re-raising the exception if it is not related to the window being closed
+        raise e
